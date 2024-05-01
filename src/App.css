@@ -1,38 +1,46 @@
 .App {
-  text-align: center;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.explorer-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.explorer-item-name{
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 4px;
+
+}
+.explorer-item-name--expanded{
+    font-weight: bold;
+}
+.explorer-item-name:hover{
+    background-color: #eee;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.file-icon{
+    margin-right: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ctx-menu {
+    position: absolute;
+    background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.ctx-menu-item{
+    padding: 4px;
+    min-width: 100px;
+    cursor: pointer;
+    border: 1px solid #ccc;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ctx-menu-item:hover{
+    font-weight: bold;
 }
