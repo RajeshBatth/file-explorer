@@ -18,7 +18,7 @@ export function FileExplorer({item, indentLevel, handleOnContextMenu, hideContex
         event.stopPropagation()
         hideContextMenu()
         if (item.type === "file") return
-        setIsExpanded(!isExpanded);
+        setIsExpanded(isExpanded=>!isExpanded);
     }, []);
     return <div
         onClick={handleOnClick}
